@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <div class="card">
+        <div id="ocul" class="card-body">
+          <form autocomplete="off" id="frmupdate" action="" method="POST">
+            <div class="form-group">
+              <label>Numero documento</label>
+              <input type="number" class="form-control" name="documento" placeholder="digite su documento" required>
+            </div>
+            <div class="form-group">
+              <label>escoja tipo documento</label><br>
+              <select name="tipo" id="tipo">
+                <option value="1">TI</option>
+                <option value="2">CC</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Digite nombre</label>
+              <input type="text" class="form-control" name="nombre" placeholder="digite la su nombre"
+                required>
+            </div>
+            <div class="form-group">
+              <label>Digite apellido</label>
+              <input type="text" class="form-control" name="apellido" placeholder="digite el apellido" required>
+            </div>
+            <div class="form-group">
+              <label>Digite telefono</label>
+              <input type="number" class="form-control" name="apellido" placeholder="digite el Telofono" required>
+            </div>
+            <div class="form-group">
+              <label>escoja rol</label><br>
+              <select name="rol" id="rol">escoja rol
+                <option value="1">administrador</option>
+                <option value="2">cliente</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-info animation-on-hover" name="create" value="registrar usuario">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngIf="element == true">
+        <div id="ocul" class="card">
+          <div class="card-body">
+            <form autocomplete="off" id="frmupdate" action="" method="POST">
+              <div class="form-group">
+                <label>Numero documento</label>
+                <input type="number" class="form-control" name="documento" placeholder="digite su documento" required>
+              </div>
+              <div class="form-group">
+                <label>escoja tipo documento</label><br>
+                <select name="tipo" id="tipo">
+                  <option value="1">TI</option>
+                  <option value="2">CC</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Digite nombre</label>
+                <input type="text" class="form-control" name="nombre" placeholder="digite la su nombre"
+                  required>
+              </div>
+              <div class="form-group">
+                <label>Digite apellido</label>
+                <input type="text" class="form-control" name="apellido" placeholder="digite el apellido" required>
+              </div>
+              <div class="form-group">
+                <label>Digite telefono</label>
+                <input type="number" class="form-control" name="apellido" placeholder="digite el Telofono" required>
+              </div>
+              <div class="form-group">
+                <label>escoja rol</label><br>
+                <select name="rol" id="rol">escoja rol
+                  <option value="1">administrador</option>
+                  <option value="2">cliente</option>
+                </select>
+              </div>
+              <input type="submit" class="btn btn-info animation-on-hover" name="create" value="registrar usuario">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive acv">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th>N.O doc</th>
+          <th>tipo documento</th>
+          <th>nombre</th>
+          <th>apellido</th>
+          <th>telefono</th>
+          <th>rol</th>
+          <th class="text-right">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">1</td>
+          <td>1043114194</td>
+          <td>CC</td>
+          <td>jesus</td>
+          <td>peñaranda</td>
+          <td>3244348343</td>
+          <td>administrador</td>
+          <td class="td-actions text-right">
+            <button (click)="mostrar()" type="button" rel="tooltip" class="btn btn-success btn-sm btn-round btn-icon bcn">
+              editar
+            </button>
+            <button type="button" rel="tooltip" class="btn btn-danger btn-sm btn-round btn-icon bcn">
+              eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
